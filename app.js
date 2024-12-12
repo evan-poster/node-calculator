@@ -4,12 +4,12 @@ const app = express();
 
 app.use(cors());
 
-app.route('/').get((req, res) => {
+app.get('/').get((req, res) => {
 	res.json({ message: 'Hello from the backend!' });
 })
 
 // Adds two numbers and returns the result
-app.route('/add').get((req, res) => {
+app.get('/add').get((req, res) => {
 	const { n1, n2 } = req.query;
 	const num1 = Number(n1);
 	const num2 = Number(n2);
@@ -24,7 +24,7 @@ app.route('/add').get((req, res) => {
 });
 
 // Subtracts two numbers and returns the result
-app.route('/subtract').get((req, res) => {
+app.get('/subtract').get((req, res) => {
 	const { n1, n2 } = req.query;
 	const num1 = Number(n1);
 	const num2 = Number(n2);
@@ -39,7 +39,7 @@ app.route('/subtract').get((req, res) => {
 });
 
 // Multiplies two numbers and returns the result
-app.route('/multiply').get((req, res) => {
+app.get('/multiply').get((req, res) => {
 	const { n1, n2 } = req.query;
 	const num1 = Number(n1);
 	const num2 = Number(n2);
@@ -54,7 +54,7 @@ app.route('/multiply').get((req, res) => {
 });
 
 // Divides two numbers and returns the result
-app.route('/divide').get((req, res) => {
+app.get('/divide').get((req, res) => {
 	const { n1, n2 } = req.query;
 	const num1 = Number(n1);
 	const num2 = Number(n2);
@@ -75,7 +75,7 @@ app.route('/divide').get((req, res) => {
 });
 
 // Returns n1 to the power of n2
-app.route('/power').get((req, res) => {
+app.get('/power').get((req, res) => {
 	const { n1, n2 } = req.query;
 	const num1 = Number(n1);
 	const num2 = Number(n2);
@@ -90,7 +90,7 @@ app.route('/power').get((req, res) => {
 });
 
 // Returns root of n1
-app.route('/root').get((req, res) => {
+app.get('/root').get((req, res) => {
 	const { n1 } = req.query;
 	const num1 = Number(n1);
 	if (isNaN(num1)) {
@@ -110,7 +110,7 @@ app.route('/root').get((req, res) => {
 });
 
 // Returns square of n1
-app.route('/square').get((req, res) => {
+app.get('/square').get((req, res) => {
 	const { n1 } = req.query;
 	const num1 = Number(n1);
 	if (isNaN(num1)) {
