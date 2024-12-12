@@ -4,12 +4,12 @@ const app = express();
 
 app.use(cors());
 
-app.get('/'), (req, res) => {
+app.get('/', (req, res) => {
 	res.json({ message: 'Hello from the backend!' });
-};
+});
 
 // Adds two numbers and returns the result
-app.get('/add'), (req, res) => {
+app.get('/add', (req, res) => {
 	const { n1, n2 } = req.query;
 	const num1 = Number(n1);
 	const num2 = Number(n2);
@@ -21,10 +21,10 @@ app.get('/add'), (req, res) => {
 	}
 	const result = num1 + num2;
 	res.json({ result });
-};
+});
 
 // Subtracts two numbers and returns the result
-app.get('/subtract'), (req, res) => {
+app.get('/subtract', (req, res) => {
 	const { n1, n2 } = req.query;
 	const num1 = Number(n1);
 	const num2 = Number(n2);
@@ -36,10 +36,10 @@ app.get('/subtract'), (req, res) => {
 	}
 	const result = num1 - num2;
 	res.json({ result });
-};
+});
 
 // Multiplies two numbers and returns the result
-app.get('/multiply'), (req, res) => {
+app.get('/multiply', (req, res) => {
 	const { n1, n2 } = req.query;
 	const num1 = Number(n1);
 	const num2 = Number(n2);
@@ -51,10 +51,10 @@ app.get('/multiply'), (req, res) => {
 	}
 	const result = num1 * num2;
 	res.json({ result });
-};
+});
 
 // Divides two numbers and returns the result
-app.get('/divide'), (req, res) => {
+app.get('/divide', (req, res) => {
 	const { n1, n2 } = req.query;
 	const num1 = Number(n1);
 	const num2 = Number(n2);
@@ -72,10 +72,10 @@ app.get('/divide'), (req, res) => {
 	}
 	const result = num1 / num2;
 	res.json({ result });
-};
+});
 
 // Returns n1 to the power of n2
-app.get('/power'), (req, res) => {
+app.get('/power', (req, res) => {
 	const { n1, n2 } = req.query;
 	const num1 = Number(n1);
 	const num2 = Number(n2);
@@ -87,10 +87,10 @@ app.get('/power'), (req, res) => {
 	}
 	const result = Math.pow(num1, num2);
 	res.json({ result });
-};
+});
 
 // Returns root of n1
-app.get('/root'), (req, res) => {
+app.get('/root', (req, res) => {
 	const { n1 } = req.query;
 	const num1 = Number(n1);
 	if (isNaN(num1)) {
@@ -107,10 +107,10 @@ app.get('/root'), (req, res) => {
 	}
 	const result = Math.sqrt(num1);
 	res.json({ result });
-};
+});
 
 // Returns square of n1
-app.get('/square'), (req, res) => {
+app.get('/square', (req, res) => {
 	const { n1 } = req.query;
 	const num1 = Number(n1);
 	if (isNaN(num1)) {
@@ -121,7 +121,7 @@ app.get('/square'), (req, res) => {
 	}
 	const result = Math.pow(num1, 2);
 	res.json({ result });
-};
+});
 
 
 // const PORT = 3000;
