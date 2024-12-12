@@ -4,10 +4,6 @@ const app = express();
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-	res.json({ message: 'Hello from the backend!' });
-});
-
 // Adds two numbers and returns the result
 app.get('/add', (req, res) => {
 	const { n1, n2 } = req.query;
@@ -121,6 +117,10 @@ app.get('/square', (req, res) => {
 	}
 	const result = Math.pow(num1, 2);
 	res.json({ result });
+});
+
+app.get('/', (req, res) => {
+	res.json({ message: 'Hello from the backend!' });
 });
 
 
