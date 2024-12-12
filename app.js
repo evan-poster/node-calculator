@@ -119,9 +119,9 @@ app.get('/square', (req, res) => {
 	res.json({ result });
 });
 
-app.get('/', (req, res) => {
-	res.json({ message: 'Hello from the backend!' });
-});
+// app.get('/', (req, res) => {
+// 	res.json({ message: 'Hello from the backend!' });
+// });
 
 
 const PORT = process.env.PORT || 3000;
